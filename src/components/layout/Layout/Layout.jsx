@@ -2,7 +2,7 @@ function Layout({ children }) {
   return (
     <div>
       <header>
-        <h1>🎨 Studio Ghibli</h1>
+        <h1>Studio Ghibli</h1>
       </header>
       <nav>
         <a href="/" >Home</a>
