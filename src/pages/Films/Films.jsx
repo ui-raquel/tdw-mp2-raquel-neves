@@ -15,7 +15,7 @@ function Films() {
       <div>
         {films.map(film => (
           <div key={film.id} >
-            <h3>{film.title}</h3>
+            <h3><a href={`/films/${film.id}`}>{film.title}</a></h3>
             <p><strong>Director:</strong> {film.director}</p>
             <p><strong>Year:</strong> {film.release_date}</p>
             <p><strong>Rating:</strong> {film.rt_score}/100</p>

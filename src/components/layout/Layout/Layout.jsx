@@ -7,6 +7,7 @@ function Layout({ children }) {
       <nav>
         <a href="/" >Home</a>
         <a href="/films" >Films</a>
+        <a href="/StudioGhibli" >Studio Ghibli</a>
         <a href="/about" >About</a>
       </nav>
       <main>

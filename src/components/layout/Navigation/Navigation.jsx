@@ -5,6 +5,7 @@ function Navigation() {
     <nav>
       <Link to="/">Home</Link>
       <Link to="/films/List">Films</Link>
+      <Link to="/StudioGhibli">Studio Ghibli</Link>
       <Link to="/about">About</Link>
     </nav>
   )
