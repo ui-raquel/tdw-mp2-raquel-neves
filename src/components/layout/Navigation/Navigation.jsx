@@ -7,6 +7,8 @@ function Navigation() {
       <Link to="/films/List">Films</Link>
       <Link to="/StudioGhibli">Studio Ghibli</Link>
       <Link to="/about">About</Link>
+      <Link to="/animals">Animals</Link>
+      <Link to="/characters">Characters</Link>
     </nav>
   )
 }

@@ -5,7 +5,7 @@ export const ghibliApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: 'https://ghibliapi.vercel.app/',
   }),
-  tagTypes: ['Films'],
+  tagTypes: ['Films', 'People', 'Species'],
   endpoints: (builder) => ({
     getFilms: builder.query({
       query: () => '/films',
@@ -14,7 +14,15 @@ export const ghibliApi = createApi({
     getFilmById: builder.query({
       query: (id) => `/films/${id}`,
     }),
+    getPeople: builder.query({
+      query: () => '/people',
+      providesTags: ['People'],
+    }),
+    getSpecies: builder.query({
+      query: () => '/species',
+      providesTags: ['Species'],
+    }),
   }),
 })
 
-export const { useGetFilmsQuery, useGetFilmByIdQuery } = ghibliApi
+export const { useGetFilmsQuery, useGetFilmByIdQuery, useGetPeopleQuery, useGetSpeciesQuery } = ghibliApi

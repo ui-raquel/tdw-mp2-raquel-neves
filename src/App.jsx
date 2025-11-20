@@ -5,6 +5,8 @@ import Films from './pages/Films/Films'
 import FilmDetail from './pages/FilmDetail/FilmDetail'
 import About from './pages/About/About'
 import AboutSG from './pages/StudioGhibli/AboutSG'
+import Animals from './pages/Animals/Animals'
+import Characters from './pages/Characters/Characters'
 import './App.css'
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
         <Route path="/films/:id" element={<FilmDetail />} />
         <Route path="/StudioGhibli" element={<AboutSG />} />
         <Route path="/about" element={<About />} />
+        <Route path="/animals" element={<Animals />} />
+        <Route path="/characters" element={<Characters />} />
       </Routes>
     </Layout>
   )

@@ -1,8 +1,8 @@
 function About() {
   return (
     <div>
-      <h1>Sobre o Projeto</h1>
-      <p>Esta é uma aplicação sobre os filmes do Studio Ghibli</p>
+      <h1>About this Project</h1>
+      <p>This is a mini project etc etc</p>
     </div>
   )
 }
