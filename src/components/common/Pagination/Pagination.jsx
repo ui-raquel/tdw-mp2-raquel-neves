@@ -6,7 +6,7 @@ function Pagination({ currentPage, totalItems, itemsPerPage = 10, onPageChange }
   if (totalPages <= 1) return null;
 
   return (
-    <div style={{ textAlign: 'center', margin: '20px 0' }}>
+    <div style={{ textAlign: 'center', marginTop: '100px', paddingBottom: '40px' }}>
       <button 
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}

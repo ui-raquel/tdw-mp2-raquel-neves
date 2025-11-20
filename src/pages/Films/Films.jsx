@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useGetFilmsQuery } from '../../store/api/ghibliApi'
 import Pagination from '../../components/common/Pagination/Pagination'
+import FilmCard from '../../components/films/FilmCard/FilmCard.jsx'
 
 function Films() {
   const { data: films, error, isLoading } = useGetFilmsQuery()
@@ -27,21 +28,15 @@ function Films() {
       <h1>Studio Ghibli Films</h1>
       <p>Total films: {films.length} | Showing {startIndex + 1}-{Math.min(endIndex, films.length)} of {films.length}</p>
       
-      <div>
+      <div style={{ 
+        display: 'grid', 
+        gridTemplateColumns: 'repeat(2, 1fr)', 
+        gap: '25px',
+        width: '100%',
+        marginBottom: '30px'
+      }}>
         {currentFilms.map(film => (
-          <div key={film.id} >
-            <h3><a href={`/films/${film.id}`}>{film.title}</a></h3>
-            <p><strong>Director:</strong> {film.director}</p>
-            <p><strong>Year:</strong> {film.release_date}</p>
-            <p><strong>Rating:</strong> {film.rt_score}/100</p>
-            <img 
-              src={film.image} 
-              alt={film.title}
-              onError={(e) => {
-                e.target.style.display = 'none'
-              }}
-            />
-          </div>
+          <FilmCard key={film.id} film={film} /> // ← USAR o componente
         ))}
       </div>
 
