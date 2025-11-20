@@ -4,7 +4,7 @@ function Navigation() {
   return (
     <nav>
       <Link to="/">Home</Link>
-      <Link to="/films">Films</Link>
+      <Link to="/films/List">Films</Link>
       <Link to="/about">About</Link>
     </nav>
   )
