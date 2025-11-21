@@ -4,7 +4,7 @@ function Home() {
       <h1>Welcome to Studio Ghibli!</h1>
       <p>Explore the magical world of Studio Ghibli films</p>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;

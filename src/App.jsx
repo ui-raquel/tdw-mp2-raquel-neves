@@ -1,13 +1,13 @@
-import { Routes, Route } from 'react-router-dom'
-import Layout from './components/layout/Layout/Layout'
-import Home from './pages/Home/Home'
-import Films from './pages/Films/Films'
-import FilmDetail from './pages/FilmDetail/FilmDetail'
-import About from './pages/About/About'
-import AboutSG from './pages/StudioGhibli/AboutSG'
-import Animals from './pages/Animals/Animals'
-import Characters from './pages/Characters/Characters'
-import './App.css'
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/layout/Layout/Layout";
+import Home from "./pages/Home/Home";
+import Films from "./pages/Films/Films";
+import FilmDetail from "./pages/FilmDetail/FilmDetail";
+import About from "./pages/About/About";
+import AboutSG from "./pages/StudioGhibli/AboutSG";
+import Animals from "./pages/Animals/Animals";
+import Characters from "./pages/Characters/Characters";
+import "./App.css";
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
         <Route path="/characters" element={<Characters />} />
       </Routes>
     </Layout>
-  )
+  );
 }
 
-export default App
+export default App;

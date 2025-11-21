@@ -1,24 +1,31 @@
-import React from 'react';
+import React from "react";
 
-function Pagination({ currentPage, totalItems, itemsPerPage = 10, onPageChange }) {
+function Pagination({
+  currentPage,
+  totalItems,
+  itemsPerPage = 10,
+  onPageChange,
+}) {
   const totalPages = Math.ceil(totalItems / itemsPerPage);
 
   if (totalPages <= 1) return null;
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '100px', paddingBottom: '40px' }}>
-      <button 
+    <div
+      style={{ textAlign: "center", marginTop: "100px", paddingBottom: "40px" }}
+    >
+      <button
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
       >
         Previous
       </button>
-      
-      <span style={{ margin: '0 15px' }}>
+
+      <span style={{ margin: "0 15px" }}>
         Page {currentPage} of {totalPages}
       </span>
-      
-      <button 
+
+      <button
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
       >

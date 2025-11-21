@@ -1,5 +1,5 @@
-import { configureStore } from '@reduxjs/toolkit'
-import { ghibliApi } from './api/ghibliApi'
+import { configureStore } from "@reduxjs/toolkit";
+import { ghibliApi } from "./api/ghibliApi";
 
 export const store = configureStore({
   reducer: {
@@ -7,4 +7,4 @@ export const store = configureStore({
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(ghibliApi.middleware),
-})
+});
