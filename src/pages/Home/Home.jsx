@@ -30,6 +30,9 @@ function Home() {
           display: "grid",
           gridTemplateColumns: "repeat(3, minmax(300px, 1fr))",
           gap: "25px",
+          maxWidth: "80%",
+          margin: "0 auto",
+          alignItems: "end"
         }}>
           {topFilms.map((film) => (
             <FilmCard key={film.id} film={film} />
