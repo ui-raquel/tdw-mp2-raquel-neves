@@ -1,11 +1,12 @@
 import { useGetPeopleQuery } from "../../store/api/ghibliApi";
 import Pagination from "../../components/common/Pagination/Pagination";
 import { useState } from "react";
+import PeopleCard from "../../components/characters/CharactersCard.jsx";
 
 function Characters() {
   const { data: people, error, isLoading } = useGetPeopleQuery();
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
+  const itemsPerPage = 20;
 
   if (isLoading) return <div>Loading characters...</div>;
   if (error) return <div>Error loading characters: {error.message}</div>;
@@ -28,20 +29,20 @@ function Characters() {
         Total characters: {people.length} | Showing {startIndex + 1}-
         {Math.min(endIndex, people.length)} of {people.length}
       </p>
-      <section>
+      <section
+        style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(4, 1fr)",
+            gap: "25px",
+            width: "100%",
+            marginBottom: "30px",
+            alignItems: "end",
+          }}>
+            
         {currentPeople.map((person) => (
-          <div key={person.id}>
-            <h3>
-              <a href={`/characters/${person.id}`}>{person.name}</a>
-            </h3>
-            <p>
-              <strong>Gender:</strong> {person.gender}
-            </p>
-            <p>
-              <strong>Age:</strong> {person.age}
-            </p>
-          </div>
+          <PeopleCard key={person.id} people={person} />
         ))}
+
       </section>
       <Pagination
         currentPage={currentPage}

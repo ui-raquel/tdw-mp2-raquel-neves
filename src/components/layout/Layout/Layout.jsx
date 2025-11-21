@@ -5,6 +5,7 @@ function Layout({ children }) {
         minHeight: "100vh",
         alignItems: "center",
         background: "linear-gradient(135deg, #f3e7ffff 0%, #d4c1faff 100%)",
+        color: "white",
       }}
     >
       <header
@@ -32,7 +33,6 @@ function Layout({ children }) {
 
         <h1
           style={{
-            color: "white",
             margin: "0 0 15px 0",
             fontSize: "2.5rem",
             fontFamily: "Noto Sans JP, sans-serif",

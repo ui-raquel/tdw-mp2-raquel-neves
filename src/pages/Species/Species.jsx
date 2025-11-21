@@ -16,10 +16,11 @@ function Species() {
       <section 
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(2, 1fr)",
+          gridTemplateColumns: "repeat(4, 1fr)",
           gap: "25px",
           width: "100%",
           marginBottom: "30px",
+          alignItems: "end"
         }}>
 
         {species.map((speciesItem) => (
