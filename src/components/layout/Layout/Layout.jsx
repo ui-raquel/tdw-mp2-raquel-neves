@@ -59,7 +59,7 @@ function Layout({ children }) {
             "/StudioGhibli",
             "/films",
             "/characters",
-            "/animals",
+            "/species",
             "/about",
           ].map((path, index) => {
             const names = [
@@ -67,7 +67,7 @@ function Layout({ children }) {
               "Studio",
               "Films",
               "Characters",
-              "Animals",
+              "Species",
               "About",
             ];
             return (

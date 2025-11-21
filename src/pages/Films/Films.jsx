@@ -6,7 +6,7 @@ import FilmCard from "../../components/films/FilmCard/FilmCard.jsx";
 function Films() {
   const { data: films, error, isLoading } = useGetFilmsQuery();
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
+  const itemsPerPage = 9;
 
   if (isLoading) return <div>Loading films...</div>;
   if (error) return <div>Error loading films: {error.message}</div>;
@@ -34,14 +34,14 @@ function Films() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(2, 1fr)",
+          gridTemplateColumns: "repeat(3, 1fr)",
           gap: "25px",
           width: "100%",
           marginBottom: "30px",
         }}
       >
         {currentFilms.map((film) => (
-          <FilmCard key={film.id} film={film} /> // ← USAR o componente
+          <FilmCard key={film.id} film={film} /> 
         ))}
       </div>
 
