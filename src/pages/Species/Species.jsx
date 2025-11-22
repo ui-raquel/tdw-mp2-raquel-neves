@@ -16,9 +16,10 @@ function Species() {
       <section 
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(4, 1fr)",
+          gridTemplateColumns: "repeat(2, 1fr)",
           gap: "25px",
-          width: "100%",
+          width: "80%",
+          margin: "0 auto",
           marginBottom: "30px",
           alignItems: "end"
         }}>

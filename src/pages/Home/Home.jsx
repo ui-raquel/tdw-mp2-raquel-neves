@@ -23,8 +23,8 @@ function Home() {
   return (
     <div style={{ padding: "20px", maxWidth: "100%", margin: "0 auto" }}>
       <div style={{ textAlign: "center", marginBottom: "40px" }}>
-        <h1>Welcome to Studio Ghibli!</h1>
-        <p>Explore the magical world of Studio Ghibli films</p>
+        <h1>Welcome to Studio Ghibli! <i class="bi bi-stars"></i></h1>
+        <h2><i>Explore the magical world of Studio Ghibli films</i></h2>
       </div>
 
       <section>
