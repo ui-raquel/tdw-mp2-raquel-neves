@@ -21,11 +21,11 @@ function Layout({ children }) {
           boxShadow: "0 4px 15px rgba(0,0,0,0.1)",
         }}
       >
-        <h2>スタジオジブリ</h2>
+        <h2 style={{ marginBottom: "10px"}}>スタジオジブリ</h2>
 
         <hr
           style={{
-            width: "30%",
+            width: "20%",
             margin: "10px auto",
             border: "1px solid",
           }}
