@@ -28,7 +28,12 @@ export const tmdbApi = createApi({
       query: (id) => `movie/${id}/watch/providers`,
       providesTags: ["MovieProviders"],
     }),
+
+    getVideos: builder.query({
+      query: (id) => `movie/${id}/videos`,
+    }),
+
   }),
 });
 
-export const { useSearchMovieQuery, useGetMovieImagesQuery, useGetWatchProvidersQuery } = tmdbApi;
+export const { useSearchMovieQuery, useGetMovieImagesQuery, useGetVideosQuery } = tmdbApi;

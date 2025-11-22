@@ -66,6 +66,28 @@ function FilmDetail() {
         <p>
           <strong>Rotten Tomatoes Score:</strong> ⭐ {film.rt_score}/100
         </p>
+        <p>
+          <strong>Watch Providers:</strong> {tmdbMovieId ? (
+            <a 
+              href={`https://www.justwatch.com/us/search?q=${encodeURIComponent(searchResults.results[0].title)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: 'rgb(118, 75, 162)',
+                textDecoration: 'none',
+                fontWeight: '500'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.textDecoration = 'underline';
+              }}
+              onMouseOut={(e) => {
+                e.target.style.textDecoration = 'none';
+              }}
+            >
+              Check on JustWatch
+            </a>
+          ) : 'No data available'}
+        </p>
       </section>
 
       <hr style={{ margin: "20px 0", height: "1px", background: "linear-gradient(90deg, transparent, rgba(155, 121, 186, 1), transparent)", border:"none" }}></hr>

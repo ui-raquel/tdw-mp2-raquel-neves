@@ -41,6 +41,13 @@ h2 {
   margin-bottom: 30px;
 }
 
+h3 {
+  font-size: 1.4em;
+  line-height: 1.2;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
 button {
   color: white;
   padding: 8px 16px;
@@ -119,4 +126,14 @@ button:focus-visible {
   align-items: end;
 }
 
+.figures-img {
+  width: 450px;
+  border-radius: 8px;
+  margin: 10px auto;
+}
 
+.figures-img:hover {
+  transform: rotate(-2deg);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}

@@ -57,9 +57,12 @@ function About() {
             <li><strong>Enhanced Search:</strong> Implementing advanced search capabilities, including filters for genre and director.</li>
           </ul>
         </section>
-        <section className="card">
+        <section className="card" style={{ textAlign: "center"}}>
           <h2><i class="bi bi-person-badge"></i> Developer</h2>
           <p>This project was developed by Raquel Neves as part of the coursework for the TDW class at Universidade de Aveiro.</p>
+          <p><i class="bi bi-heart-fill" style={{ color: "darkred" }}></i> Thank you for visiting and exploring the world of Studio Ghibli through this application.</p>
+          <br></br>
+          <p><em>Raquel Neves | 112815</em></p>
         </section>
       </div>
     </div>
