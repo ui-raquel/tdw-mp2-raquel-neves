@@ -47,8 +47,8 @@ function About() {
           <p>The Screenshots section in Film Details uses The Movie Database (TMDB) API to fetch additional images related to each film, enhancing the visual experience for users.</p>
         </section>
         <section className="card">
-          <h2><i class="bi bi-check-circle"></i> Future Enhancements</h2>
-          <p>Planned future enhancements for the application include:</p>
+          <h2><i class="bi bi-check-circle"></i> Possible Enhancements</h2>
+          <p>Possible future enhancements for the application include:</p>
           <ul>
             <li><strong>User Reviews:</strong> Allowing users to submit and read reviews for each film.</li>
             <li><strong>Watchlist Feature:</strong> Enabling users to create and manage a personal watchlist of favorite films.</li>

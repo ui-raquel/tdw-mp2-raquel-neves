@@ -16,14 +16,9 @@ function FilmFilters({ filters, onFilterChange, sortOrder, onSortOrderChange }) 
         </label>
         <select
           id="filter"
+          className="filterButton"
           value={filters}
           onChange={(e) => onFilterChange(e.target.value)}
-          style={{
-            padding: "8px 12px",
-            borderRadius: "6px",
-            border: "1px solid #ccc",
-            fontSize: "14px"
-          }}
         >
           <option value="">None (Original Order)</option>
           <option value="director">Director</option>
@@ -41,12 +36,7 @@ function FilmFilters({ filters, onFilterChange, sortOrder, onSortOrderChange }) 
             id="order"
             value={sortOrder}
             onChange={(e) => onSortOrderChange(e.target.value)}
-            style={{
-              padding: "8px 12px",
-              borderRadius: "6px", 
-              border: "1px solid #ccc",
-              fontSize: "14px"
-            }}
+            className="filterButton"
           >
             <option value="asc">Ascending</option>
             <option value="desc">Descending</option>

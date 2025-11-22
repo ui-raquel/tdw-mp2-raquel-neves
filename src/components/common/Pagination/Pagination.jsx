@@ -17,6 +17,7 @@ function Pagination({
       <button
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
+        style={{ color: "rgb(118, 75, 162)"}}
       >
         Previous
       </button>
@@ -28,6 +29,7 @@ function Pagination({
       <button
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
+        style={{ color: "rgb(118, 75, 162)"}}
       >
         Next
       </button>

@@ -7,9 +7,7 @@ function FilmCard({ film }) {
         src={film.image}
         alt={film.title}
         style={{
-          width: "60%",
-          height: "60%",
-          objectFit: "cover",
+          width: "70%",
           borderRadius: "8px",
           marginBottom: "15px",
           position: "relative",

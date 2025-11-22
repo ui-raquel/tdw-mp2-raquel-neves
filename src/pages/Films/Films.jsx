@@ -65,20 +65,23 @@ function Films() {
 
 
   return (
-    <div>
+    <div style={{ padding: "40px", maxWidth: "100%", margin: "0 auto" }}>
       <h1>Studio Ghibli Films</h1>
       
-      <FilmFilters 
-        filters={filters} 
-        onFilterChange={handleFilterChange}
-        sortOrder={sortOrder}
-        onSortOrderChange={setSortOrder}
-      />
+      <div style={{ display: "flex", gap: "20px", marginBottom: "20px", flexWrap: "wrap", justifyContent: "space-between" }}>
 
-      <FilmSearch 
+        <FilmSearch 
         search={search} 
         onSearchChange={setSearch} 
-      />
+        />
+
+        <FilmFilters 
+          filters={filters} 
+          onFilterChange={handleFilterChange}
+          sortOrder={sortOrder}
+          onSortOrderChange={setSortOrder}
+        />
+      </div>
       
       <p>
         Total films: {processedFilms.length} | Showing {startIndex + 1}-
