@@ -14,6 +14,12 @@ function Home() {
         .slice(0, 3)
     : [];
 
+  const letUsChoose = films
+    ? [...films]
+        .sort(() => 0.5 - Math.random())
+        .slice(0, 3)
+    : [];
+
   return (
     <div style={{ padding: "20px", maxWidth: "100%", margin: "0 auto" }}>
       <div style={{ textAlign: "center", marginBottom: "40px" }}>
@@ -22,23 +28,28 @@ function Home() {
       </div>
 
       <section>
-        <h2 style={{ textAlign: "center", marginBottom: "30px" }}>
+        <h2>
           Highest Rated Films
         </h2>
         
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3, minmax(300px, 1fr))",
-          gap: "25px",
-          maxWidth: "80%",
-          margin: "0 auto",
-          alignItems: "end"
-        }}>
+        <div className="films-grid">
           {topFilms.map((film) => (
             <FilmCard key={film.id} film={film} />
           ))}
         </div>
       </section>
+
+      <section>
+        <h2>Let Us Choose For You!</h2>
+
+        <div className="films-grid">
+          {letUsChoose.map((film) => (
+            <FilmCard key={film.id} film={film} />
+          ))}
+        </div>
+
+      </section>
+
     </div>
   );
 }
