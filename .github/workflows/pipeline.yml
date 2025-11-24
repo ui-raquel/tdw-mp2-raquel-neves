@@ -38,6 +38,8 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build project for deploy
+        env:
+          VITE_TMDB_READ_TOKEN: ${{ secrets.VITE_TMDB_READ_TOKEN }}
         run: npm run build
       - name: Deploy to Netlify
         run: npx netlify-cli deploy --site ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --prod --dir=dist
