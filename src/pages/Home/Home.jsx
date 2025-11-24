@@ -24,6 +24,7 @@ function Home() {
     <div style={{ padding: "20px", maxWidth: "100%", margin: "0 auto" }}>
       <div style={{ textAlign: "center", marginBottom: "40px" }}>
         <h1>Welcome to Studio Ghibli! <i class="bi bi-stars"></i></h1>
+        {console.log("VITE token present:", Boolean(import.meta.env.VITE_TMDB_READ_TOKEN))}
         <h2><i>Explore the magical world of Studio Ghibli films</i></h2>
       </div>
 
