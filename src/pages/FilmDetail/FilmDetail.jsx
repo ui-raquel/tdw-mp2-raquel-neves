@@ -24,6 +24,8 @@ function FilmDetail() {
   if (error) return <div>Error loading films: {error.message}</div>;
   if (!film) return <div>No films found</div>;
 
+  console.log(import.meta.env.VITE_TMDB_READ_TOKEN);
+
   const screenshots = movieImages?.backdrops?.slice(0, 24) || [];
 
   return (
