@@ -148,6 +148,7 @@ button:focus-visible {
   font-weight: 500;
   min-width: 100px;
   font-size: 14px;
+  height: 42px;
 }
 
 .searchBox:focus {
@@ -169,6 +170,7 @@ button:focus-visible {
   font-weight: 500;
   min-width: 100px;
   font-size: 14px;
+  height: 42px;
 }
 
 .filterButton:focus {
@@ -179,3 +181,4 @@ button:focus-visible {
 .filterButton:hover {
   background-color: rgba(255, 255, 255, 0.4);
 }
+
