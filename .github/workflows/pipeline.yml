@@ -11,6 +11,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
     steps:
       - uses: actions/checkout@v2
       - name: Set up Node.js
@@ -28,6 +30,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     if: ${{ github.ref == 'refs/heads/main' && success() }}
+    env:
+      VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
     steps:
       - uses: actions/checkout@v4
 
