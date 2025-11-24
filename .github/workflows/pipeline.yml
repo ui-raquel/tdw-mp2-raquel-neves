@@ -12,7 +12,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
+      VITE_TMDB_READ_TOKEN: ${{ secrets.VITE_TMDB_READ_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - name: Set up Node.js
@@ -31,7 +31,7 @@ jobs:
     needs: build
     if: ${{ github.ref == 'refs/heads/main' && success() }}
     env:
-      VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
+      VITE_TMDB_READ_TOKEN: ${{ secrets.VITE_TMDB_READ_TOKEN }}
     steps:
       - uses: actions/checkout@v4
 
