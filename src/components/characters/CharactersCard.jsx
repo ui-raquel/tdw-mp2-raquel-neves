@@ -12,11 +12,17 @@ function PeopleCard ({ people }) {
         {people.name}
         {people.classification !== people.name && ` (${people.gender})`}
       </h2>
-
-      <div style={{ marginTop: "auto" }}>
-        <Link className="viewDetailsButton" to={`/people/${people.id}`}>
-          View Details
-        </Link>
+      
+      <div style={{ flex: 1, alignContent: 'center', textAlign: 'left' }}>
+        <p style={{ margin: "0 0 8px 0", color: "#666" }}>
+          <strong><i className="bi bi-eye"></i> Eye Color:</strong> {people.eye_color}
+        </p>
+        <p style={{ margin: "0 0 8px 0", color: "#666" }}>
+          <strong><i className="bi bi-palette"></i> Hair Color:</strong> {people.hair_color}
+        </p>
+        <p style={{ margin: "0 0 8px 0", color: "#666" }}>
+          <strong><i className="bi bi-cake2"></i> Age:</strong> {people.age}
+        </p>
       </div>
     </div>
   );

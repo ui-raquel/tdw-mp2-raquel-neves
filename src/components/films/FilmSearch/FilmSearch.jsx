@@ -8,6 +8,7 @@ function FilmSearch({ search, onSearchChange }) {
         placeholder="Search films by title..."
         value={search}
         onChange={(e) => onSearchChange(e.target.value)}
+        
       />
       <button
         onClick={() => onSearchChange(search)}
@@ -17,6 +18,7 @@ function FilmSearch({ search, onSearchChange }) {
           color: "rgb(118, 75, 162)"
         }} className="bi bi-search"></i>
       </button>
+      
     </div>
   );
 }

@@ -1,12 +1,21 @@
 import { useGetPeopleQuery } from "../../store/api/ghibliApi";
 import Pagination from "../../components/common/Pagination/Pagination";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import PeopleCard from "../../components/characters/CharactersCard.jsx";
 
 function Characters() {
   const { data: people, error, isLoading } = useGetPeopleQuery();
-  const [currentPage, setCurrentPage] = useState(1);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const pageParam = parseInt(searchParams.get("page")) || 1;
+  const [currentPage, setCurrentPage] = useState(pageParam);
   const itemsPerPage = 20;
+
+  useEffect(() => {
+    const p = parseInt(searchParams.get("page")) || 1;
+    if (p !== currentPage) setCurrentPage(p);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams]);
 
   if (isLoading) return <div>Loading characters...</div>;
   if (error) return <div>Error loading characters: {error.message}</div>;
@@ -18,6 +27,9 @@ function Characters() {
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
+    const params = Object.fromEntries(searchParams.entries());
+    params.page = String(page);
+    setSearchParams(params);
     // Scroll to top when page changes
     window.scrollTo({ top: 0, behavior: "smooth" });
   };

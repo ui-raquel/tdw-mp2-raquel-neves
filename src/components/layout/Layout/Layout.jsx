@@ -1,3 +1,5 @@
+import Footer from "../Footer/Footer.jsx";
+
 function Layout({ children }) {
   return (
     <div
@@ -100,7 +102,6 @@ function Layout({ children }) {
           })}
         </nav>
       </header>
-
       <main
         style={{
           width: "100%",
@@ -112,6 +113,9 @@ function Layout({ children }) {
       >
         {children}
       </main>
+
+      <Footer />
+
     </div>
   );
 }
