@@ -8,6 +8,7 @@ export default defineConfig([
   globalIgnores(["dist"]),
   {
     files: ["**/*.{js,jsx}"],
+    ignores: ["**/*.test.{js,jsx}", "**/__mocks__/**"],
     extends: [
       js.configs.recommended,
       reactHooks.configs.flat.recommended,
@@ -24,6 +25,21 @@ export default defineConfig([
     },
     rules: {
       "no-unused-vars": ["error", { varsIgnorePattern: "^[A-Z_]" }],
+    },
+  },
+  {
+    files: ["**/*.test.{js,jsx}", "**/__mocks__/**", "jest.setup.js"],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: {
+        ...globals.jest,
+        ...globals.node,
+      },
+      parserOptions: {
+        ecmaVersion: "latest",
+        ecmaFeatures: { jsx: true },
+        sourceType: "module",
+      },
     },
   },
 ]);
