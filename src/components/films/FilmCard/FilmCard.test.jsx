@@ -8,7 +8,6 @@ test('renders film title and director', () => {
     title: 'Spirited Away',
     director: 'Hayao Miyazaki',
     release_date: '2001',
-    image: 'https://example.com/spirited-away.jpg'
   };
   
   render(

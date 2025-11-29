@@ -1,3 +1,5 @@
+import { Card } from "../../components/common/StyledComponents";
+
 function AboutSG() {
   return (
     <div style={{ padding: "20px", maxWidth: "1000px", margin: "0 auto" }}>
@@ -7,28 +9,28 @@ function AboutSG() {
       <p>Whether you're a longtime fan or new to their films, Studio Ghibli offers a magical journey filled with wonder, emotion, and timeless tales.</p>
       <section style={{ paddingTop: "40px"}}>
         <h1>Key Figures Behind Studio Ghibli</h1>
-        <div className="card">
+        <Card>
           <h2>Hayao Miyazaki</h2> Co-founder and visionary director known for his imaginative storytelling and iconic films like "Spirited Away" and "My Neighbor Totoro."
             <img src="/images/hayao-miyazaki.jpg" alt="Hayao Miyazaki" className="figures-img" />
-        </div>
-        <div className="card">
+        </Card>
+        <Card>
           <h2>Isao Takahata</h2> Co-founder and acclaimed director of films such as "Grave of the Fireflies" and "The Tale of the Princess Kaguya," known for his poignant narratives.
             <img src="/images/isao_takahata.webp" alt="Isao Takahata" className="figures-img" />
-        </div>
-        <div className="card">
+        </Card>
+        <Card>
           <h2>Toshio Suzuki</h2> Producer and key figure in Ghibli's success, instrumental in bringing many of the studio's projects to fruition.
             <img src="/images/toshio-suzuki.avif" alt="Toshio Suzuki" className="figures-img" />
-        </div>
-        <div className="card">
+        </Card>
+        <Card>
           <h2>Joe Hisaishi</h2> Renowned composer whose evocative scores have become synonymous with Ghibli films, enhancing their emotional depth.
             <img src="/images/joe-hisaishi.jpg" alt="Joe Hisaishi" className="figures-img" />
-        </div>
+        </Card>
       </section>
-      <section className="card">
+      <Card>
         <h2>Cultural Impact</h2>
         <p>Studio Ghibli's films have left an indelible mark on global culture, influencing not only the animation industry but also inspiring countless artists and storytellers. Their works have sparked discussions on important social issues, fostered a deeper appreciation for Japanese culture, and created a dedicated fanbase that spans generations.</p>
         <p>Through their timeless stories and stunning visuals, Studio Ghibli continues to enchant audiences worldwide, reminding us of the power of imagination and the beauty of storytelling.</p>
-      </section>
+      </Card>
     </div>
   );
 }

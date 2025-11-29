@@ -1,3 +1,5 @@
+import { Card } from "../../components/common/StyledComponents";
+
 function About() {
   return (
     <div style={{ padding: "20px", maxWidth: "1000px", margin: "0 auto" }}>
@@ -19,7 +21,7 @@ function About() {
           alignItems: "end",
           textAlign: "left"
         }}>
-        <section className="card">
+        <Card>
           <h2><i class="bi bi-display"></i> Features</h2>
           <ol>
             <li><strong>Browse Films:</strong> Users can explore a curated list of Studio Ghibli films, complete with detailed information about each movie, including synopses, release dates, directors, and ratings.</li>
@@ -28,8 +30,8 @@ function About() {
             <li><strong>Search and Filter:</strong> The platform offers robust search and filtering capabilities, allowing users to easily find films based on criteria such as release date, rating, and title.</li>
             <li><strong>Responsive Design:</strong> The application is designed to be fully responsive, ensuring an optimal viewing experience across a range of devices, from desktops to mobile phones.</li>
           </ol>
-        </section>
-        <section className="card">
+        </Card>
+        <Card>
           <h2><i class="bi bi-code-square"></i> Technologies Used</h2>
           <ul>
             <li><strong>React:</strong> The application is built using React, a popular JavaScript library for building user interfaces.</li>
@@ -40,13 +42,13 @@ function About() {
             <li><strong>Studio Ghibli API:</strong> The application leverages the Studio Ghibli API to access detailed information about films, characters, and species.</li>
             <li><strong>TMDB API:</strong> For additional film metadata and images, the application integrates with The Movie Database (TMDB) API.</li>
           </ul>
-        </section>
-        <section className="card">
+        </Card>
+        <Card>
           <h2><i class="bi bi-database"></i> Data Source</h2>
           <p>The application utilizes the Studio Ghibli API, a public API that provides access to detailed information about Studio Ghibli films, characters, and species. This API serves as the backbone for the application's data, enabling users to explore the rich world of Studio Ghibli.</p>
           <p>The Screenshots section in Film Details uses The Movie Database (TMDB) API to fetch additional images related to each film, enhancing the visual experience for users.</p>
-        </section>
-        <section className="card">
+        </Card>
+        <Card>
           <h2><i class="bi bi-check-circle"></i> Possible Enhancements</h2>
           <p>Possible future enhancements for the application include:</p>
           <ul>
@@ -56,14 +58,14 @@ function About() {
             <li><strong>Multilingual Support:</strong> Expanding the application to support multiple languages for a broader audience.</li>
             <li><strong>Enhanced Search:</strong> Implementing advanced search capabilities, including filters for genre and director.</li>
           </ul>
-        </section>
-        <section className="card" style={{ textAlign: "center"}}>
+        </Card>
+        <Card style={{ textAlign: "center"}}>
           <h2><i class="bi bi-person-badge"></i> Developer</h2>
           <p>This project was developed by Raquel Neves as part of the coursework for the TDW class at Universidade de Aveiro.</p>
           <p><i class="bi bi-heart-fill" style={{ color: "darkred" }}></i> Thank you for visiting and exploring the world of Studio Ghibli through this application.</p>
           <br></br>
           <p><em>Raquel Neves | 112815</em></p>
-        </section>
+        </Card>
       </div>
     </div>
   );

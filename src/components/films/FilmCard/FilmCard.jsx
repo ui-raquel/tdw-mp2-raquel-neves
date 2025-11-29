@@ -1,51 +1,83 @@
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { Card } from "../../common/StyledComponents";
+
+const FilmImage = styled.img`
+  width: 70%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+`;
+
+const Title = styled.h2`
+  margin: 0 0 10px 0;
+  color: #2d3436;
+`;
+
+const Content = styled.div`
+  flex: 1;
+`;
+
+const InfoText = styled.p`
+  margin: 0 0 8px 0;
+  color: #666;
+`;
+
+const ButtonContainer = styled.div`
+  margin-top: 15px;
+`;
+
+const ViewDetailsButton = styled(Link)`
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    transform: translateY(-2px);
+    color: white;
+  }
+`;
 
 function FilmCard({ film }) {
   return (
-    <div className="card">
-      <img
+    <Card>
+      <FilmImage
         src={film.image}
         alt={film.title}
-        style={{
-          width: "70%",
-          borderRadius: "8px",
-          marginBottom: "15px",
-          position: "relative",
-          left: "50%",
-          transform: "translateX(-50%)",
-        }}
         onError={(e) => {
           e.target.src = "/placeholder-image.jpg";
         }}
       />
 
-      <h2
-        style={{
-          margin: "0 0 10px 0",
-          color: "#2d3436",
-        }}
-      >
-        {film.title}
-      </h2>
+      <Title>{film.title}</Title>
 
-      <div style={{ flex: 1 }}>
-        <p style={{ margin: "0 0 8px 0", color: "#666" }}>
+      <Content>
+        <InfoText>
           <strong>Director:</strong> {film.director}
-        </p>
-        <p style={{ margin: "0 0 8px 0", color: "#666" }}>
+        </InfoText>
+        <InfoText>
           <strong>Year:</strong> {film.release_date}
-        </p>
-        <p style={{ margin: "0 0 8px 0", color: "#666" }}>
+        </InfoText>
+        <InfoText>
           <strong>Rating:</strong> ⭐ {film.rt_score}/100
-        </p>
-      </div>
+        </InfoText>
+      </Content>
 
-      <div style={{ marginTop: "15px" }}>
-        <Link className="viewDetailsButton" to={`/films/${film.id}`}>
+      <ButtonContainer>
+        <ViewDetailsButton to={`/films/${film.id}`}>
           View Details
-        </Link>
-      </div>
-    </div>
+        </ViewDetailsButton>
+      </ButtonContainer>
+    </Card>
   );
 }
 
