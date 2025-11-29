@@ -5,16 +5,24 @@ function AboutSG() {
       <p>Founded in 1985 by visionary directors Hayao Miyazaki and Isao Takahata, Studio Ghibli has produced numerous critically acclaimed films, including "My Neighbor Totoro," "Spirited Away," and "Princess Mononoke." Their works often explore themes of environmentalism, pacifism, and the complexities of human nature, resonating with audiences of all ages.</p>
       <p>Studio Ghibli's influence extends beyond animation, inspiring filmmakers, artists, and fans worldwide. Their commitment to quality storytelling and artistry has cemented their legacy as one of the most beloved animation studios in history.</p>
       <p>Whether you're a longtime fan or new to their films, Studio Ghibli offers a magical journey filled with wonder, emotion, and timeless tales.</p>
-      <section className="card" style={{ justifyContent: "center", textAlign: "center" }}>
-        <h2>Key Figures Behind Studio Ghibli</h2>
-          <h3>Hayao Miyazaki</h3> Co-founder and visionary director known for his imaginative storytelling and iconic films like "Spirited Away" and "My Neighbor Totoro."
+      <section style={{ paddingTop: "40px"}}>
+        <h1>Key Figures Behind Studio Ghibli</h1>
+        <div className="card">
+          <h2>Hayao Miyazaki</h2> Co-founder and visionary director known for his imaginative storytelling and iconic films like "Spirited Away" and "My Neighbor Totoro."
             <img src="/images/hayao-miyazaki.jpg" alt="Hayao Miyazaki" className="figures-img" />
-          <h3>Isao Takahata</h3> Co-founder and acclaimed director of films such as "Grave of the Fireflies" and "The Tale of the Princess Kaguya," known for his poignant narratives.
+        </div>
+        <div className="card">
+          <h2>Isao Takahata</h2> Co-founder and acclaimed director of films such as "Grave of the Fireflies" and "The Tale of the Princess Kaguya," known for his poignant narratives.
             <img src="/images/isao_takahata.webp" alt="Isao Takahata" className="figures-img" />
-          <h3>Toshio Suzuki</h3> Producer and key figure in Ghibli's success, instrumental in bringing many of the studio's projects to fruition.
+        </div>
+        <div className="card">
+          <h2>Toshio Suzuki</h2> Producer and key figure in Ghibli's success, instrumental in bringing many of the studio's projects to fruition.
             <img src="/images/toshio-suzuki.avif" alt="Toshio Suzuki" className="figures-img" />
-          <h3>Joe Hisaishi</h3> Renowned composer whose evocative scores have become synonymous with Ghibli films, enhancing their emotional depth.
+        </div>
+        <div className="card">
+          <h2>Joe Hisaishi</h2> Renowned composer whose evocative scores have become synonymous with Ghibli films, enhancing their emotional depth.
             <img src="/images/joe-hisaishi.jpg" alt="Joe Hisaishi" className="figures-img" />
+        </div>
       </section>
       <section className="card">
         <h2>Cultural Impact</h2>
