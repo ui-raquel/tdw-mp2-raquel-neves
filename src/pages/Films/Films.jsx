@@ -6,6 +6,7 @@ import FilmCard from "../../components/films/FilmCard/FilmCard.jsx";
 import FilmFilters from "../../components/films/FilmFilters/FilmFilters.jsx";
 import FilmSearch from "../../components/films/FilmSearch/FilmSearch.jsx";
 import Footer from "../../components/layout/Footer/Footer.jsx";
+import { PageContainer } from "../../components/common/StyledComponents";
 
 
 function Films() {
@@ -123,7 +124,7 @@ function Films() {
 
 
   return (
-    <div style={{ padding: "40px", maxWidth: "100%", margin: "0 auto" }}>
+    <PageContainer>
       <h1>Studio Ghibli Films</h1>
       
       <div style={{ display: "flex", gap: "20px", marginBottom: "20px", flexWrap: "wrap", justifyContent: "space-between" }}>
@@ -166,7 +167,7 @@ function Films() {
         itemsPerPage={itemsPerPage}
         onPageChange={handlePageChange}
       />
-    </div>
+    </PageContainer>
   );
 }
 

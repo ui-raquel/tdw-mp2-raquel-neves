@@ -2,6 +2,15 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Card } from "../../common/StyledComponents";
 
+// Wrapper para limitar a largura do card em grids para não ficar mega gigantesco quando há poucos resultados
+const FilmCardWrapper = styled(Card)`
+  max-width: 340px;
+  width: 100%;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+`;
+
 const FilmImage = styled.img`
   width: 70%;
   border-radius: 8px;
@@ -49,7 +58,7 @@ const ViewDetailsButton = styled(Link)`
 
 function FilmCard({ film }) {
   return (
-    <Card>
+    <FilmCardWrapper>
       <FilmImage
         src={film.image}
         alt={film.title}
@@ -77,7 +86,7 @@ function FilmCard({ film }) {
           View Details
         </ViewDetailsButton>
       </ButtonContainer>
-    </Card>
+    </FilmCardWrapper>
   );
 }
 

@@ -1,8 +1,8 @@
-import { Card } from "../../components/common/StyledComponents";
+import { Card, PageContainer } from "../../components/common/StyledComponents";
 
 function About() {
   return (
-    <div style={{ padding: "20px", maxWidth: "1000px", margin: "0 auto" }}>
+    <PageContainer style={{ maxWidth: "1000px" }}>
       <section style={{ maxWidth: "800px", margin: "0 auto", padding: "20px" }}>
         <h1>About this Project</h1>
         <p>This is a web application dedicated to showcasing the magical world of Studio Ghibli films. </p>
@@ -67,7 +67,7 @@ function About() {
           <p><em>Raquel Neves | 112815</em></p>
         </Card>
       </div>
-    </div>
+    </PageContainer>
   );
 }
 

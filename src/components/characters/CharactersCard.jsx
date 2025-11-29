@@ -1,30 +1,42 @@
-import { Link } from "react-router-dom";
+import { Card } from "../common/StyledComponents";
+import styled from "styled-components";
+
+const Title = styled.h2`
+  margin: 0 0 10px 0;
+  color: #2d3436;
+`;
+
+const Content = styled.div`
+  flex: 1;
+  align-content: center;
+  text-align: left;
+`;
+
+const InfoText = styled.p`
+  margin: 0 0 8px 0;
+  color: #666;
+`;
 
 function PeopleCard ({ people }) {
   return (
-    <div className="card" style={{ display: 'flex', flexDirection: 'column' }}>
-      <h2
-        style={{
-          margin: "0 0 10px 0",
-          color: "#2d3436",
-        }}
-      >
+    <Card style={{ display: 'flex', flexDirection: 'column' }}>
+      <Title>
         {people.name}
         {people.classification !== people.name && ` (${people.gender})`}
-      </h2>
+      </Title>
       
-      <div style={{ flex: 1, alignContent: 'center', textAlign: 'left' }}>
-        <p style={{ margin: "0 0 8px 0", color: "#666" }}>
+      <Content>
+        <InfoText>
           <strong><i className="bi bi-eye"></i> Eye Color:</strong> {people.eye_color}
-        </p>
-        <p style={{ margin: "0 0 8px 0", color: "#666" }}>
+        </InfoText>
+        <InfoText>
           <strong><i className="bi bi-palette"></i> Hair Color:</strong> {people.hair_color}
-        </p>
-        <p style={{ margin: "0 0 8px 0", color: "#666" }}>
+        </InfoText>
+        <InfoText>
           <strong><i className="bi bi-cake2"></i> Age:</strong> {people.age}
-        </p>
-      </div>
-    </div>
+        </InfoText>
+      </Content>
+    </Card>
   );
 }
 

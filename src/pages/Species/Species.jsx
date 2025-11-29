@@ -1,5 +1,6 @@
 import { useGetSpeciesQuery } from "../../store/api/ghibliApi";
 import SpeciesCard from "../../components/species/SpeciesCard";
+import { PageContainer } from "../../components/common/StyledComponents";
 
 function Species() {
   const { data: species, error, isLoading } = useGetSpeciesQuery();
@@ -9,7 +10,7 @@ function Species() {
   if (!species) return <div>No species found</div>;
 
   return (
-    <div>
+    <PageContainer>
       <h1>Studio Ghibli Species</h1>
       <p>Total species: {species.length}</p>
 
@@ -30,7 +31,7 @@ function Species() {
         
       </section>
       
-    </div>
+    </PageContainer>
   );
 }
 

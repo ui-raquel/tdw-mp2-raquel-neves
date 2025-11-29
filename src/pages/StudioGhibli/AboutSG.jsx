@@ -1,8 +1,8 @@
-import { Card } from "../../components/common/StyledComponents";
+import { Card, PageContainer } from "../../components/common/StyledComponents";
 
 function AboutSG() {
   return (
-    <div style={{ padding: "20px", maxWidth: "1000px", margin: "0 auto" }}>
+    <PageContainer style={{ maxWidth: "1000px" }}>
       <h1>What Is Studio Ghibli?</h1>
       <p>Founded in 1985 by visionary directors Hayao Miyazaki and Isao Takahata, Studio Ghibli has produced numerous critically acclaimed films, including "My Neighbor Totoro," "Spirited Away," and "Princess Mononoke." Their works often explore themes of environmentalism, pacifism, and the complexities of human nature, resonating with audiences of all ages.</p>
       <p>Studio Ghibli's influence extends beyond animation, inspiring filmmakers, artists, and fans worldwide. Their commitment to quality storytelling and artistry has cemented their legacy as one of the most beloved animation studios in history.</p>
@@ -31,7 +31,7 @@ function AboutSG() {
         <p>Studio Ghibli's films have left an indelible mark on global culture, influencing not only the animation industry but also inspiring countless artists and storytellers. Their works have sparked discussions on important social issues, fostered a deeper appreciation for Japanese culture, and created a dedicated fanbase that spans generations.</p>
         <p>Through their timeless stories and stunning visuals, Studio Ghibli continues to enchant audiences worldwide, reminding us of the power of imagination and the beauty of storytelling.</p>
       </Card>
-    </div>
+    </PageContainer>
   );
 }
 

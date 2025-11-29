@@ -1,5 +1,6 @@
 import { useGetFilmsQuery } from "../../store/api/ghibliApi";
 import FilmCard from "../../components/films/FilmCard/FilmCard.jsx";
+import { PageContainer } from "../../components/common/StyledComponents";
 
 function Home() {
   const { data: films, error, isLoading } = useGetFilmsQuery();
@@ -21,7 +22,7 @@ function Home() {
     : [];
 
   return (
-    <div style={{ padding: "20px", maxWidth: "100%", margin: "0 auto" }}>
+    <PageContainer style={{ maxWidth: "100%" }}>
       <div style={{ textAlign: "center", marginBottom: "40px" }}>
         <h1>Welcome to Studio Ghibli! <i class="bi bi-stars"></i></h1>
         <h2><i>Explore the magical world of Studio Ghibli films</i></h2>
@@ -50,7 +51,7 @@ function Home() {
 
       </section>
 
-    </div>
+    </PageContainer>
   );
 }
 

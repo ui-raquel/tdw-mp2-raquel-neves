@@ -3,6 +3,7 @@ import Pagination from "../../components/common/Pagination/Pagination";
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import PeopleCard from "../../components/characters/CharactersCard.jsx";
+import { PageContainer } from "../../components/common/StyledComponents";
 
 function Characters() {
   const { data: people, error, isLoading } = useGetPeopleQuery();
@@ -35,7 +36,7 @@ function Characters() {
   };
 
   return (
-    <div>
+    <PageContainer>
       <h1>Studio Ghibli Characters</h1>
       <p>
         Total characters: {people.length} | Showing {startIndex + 1}-
@@ -49,6 +50,7 @@ function Characters() {
             width: "100%",
             marginBottom: "30px",
             alignItems: "end",
+            padding: "40px",
           }}>
             
         {currentPeople.map((person) => (
@@ -62,7 +64,7 @@ function Characters() {
         itemsPerPage={itemsPerPage}
         onPageChange={handlePageChange}
       />
-    </div>
+    </PageContainer>
   );
 }
 

@@ -29,3 +29,9 @@ export const Card = styled.div`
     line-height: 1.5;
   }
 `;
+
+export const PageContainer = styled.div`
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+`;

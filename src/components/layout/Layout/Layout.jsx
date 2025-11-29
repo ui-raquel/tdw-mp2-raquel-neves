@@ -1,28 +1,37 @@
 import Footer from "../Footer/Footer.jsx";
+import styled from "styled-components";
 
-function Layout({ children }) {
-  return (
-    <div
-      style={{
-        minHeight: "100vh",
-        alignItems: "center",
-        background: "linear-gradient(135deg, #f3e7ffff 0%, #d4c1faff 100%)",
-        color: "white",
-      }}
-    >
-      <header
-        style={{
-          width: "100%",
-          padding: "20px 0",
-          background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-          marginBottom: "30px",
-          textAlign: "center",
-          position: "sticky",
+const Header = styled.header`
+          width: 100%;
+          padding: 20px 0;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          marginBottom: 30px;
+          textAlign: center;
+          position: sticky;
           top: 0,
           zIndex: 1000,
           boxShadow: "0 4px 15px rgba(0,0,0,0.1)",
-        }}
-      >
+`;
+
+const Main = styled.main`
+  width: 100%;
+  max-width: 100vw;
+  padding: 0 20px;
+  box-sizing: border-box;
+  color: #481e67ff;
+`;
+
+const MainDiv = styled.div`
+  minHeight: 100vh;
+  alignItems: center;
+  background: linear-gradient(135deg, #f3e7ffff 0%, #d4c1faff 100%);
+  color: white;
+`;
+
+function Layout({ children }) {
+  return (
+    <MainDiv>
+      <Header><a style={{ textDecoration: "none", color: "white"}} href="/">
         <h2 style={{ marginBottom: "10px"}}>スタジオジブリ</h2>
 
         <hr
@@ -101,22 +110,14 @@ function Layout({ children }) {
             );
           })}
         </nav>
-      </header>
-      <main
-        style={{
-          width: "100%",
-          maxWidth: "100vw",
-          padding: "0 20px",
-          boxSizing: "border-box",
-          color: "#481e67ff",
-        }}
-      >
+      </a></Header>
+      <Main>
         {children}
-      </main>
+      </Main>
 
       <Footer />
 
-    </div>
+    </MainDiv>
   );
 }
 
