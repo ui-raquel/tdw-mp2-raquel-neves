@@ -1,8 +1,7 @@
 import { useGetFilmByIdQuery } from "../../store/api/ghibliApi";
 import { useParams, useNavigate } from "react-router-dom";
 import { useSearchMovieQuery, useGetMovieImagesQuery } from "../../store/api/tmdbApi";
-import { PageContainer } from "../../components/common/StyledComponents";
-
+import { PageContainer, GlassButton } from "../../components/common/StyledComponents";
 
 function FilmDetail() {
   const { id } = useParams();
@@ -33,13 +32,13 @@ function FilmDetail() {
     <PageContainer>
       <div style={{ maxWidth: "800px", margin: "0 auto"}}>
           <div style={{ display: "flex", alignItems: "center", position: "relative", marginBottom: "10px" }}>
-            <button
+            <GlassButton
               type="button"
               onClick={() => navigate(-1)}
-              style={{ flexShrink: 0, color: "rgb(118, 75, 162)" }}
+              style={{ flexShrink: 0 }}
             >
               <i className="bi bi-arrow-left"></i> Return
-            </button>
+            </GlassButton>
             <h1 style={{ flex: 1, textAlign: "center", margin: 0 }}>{film.title}</h1>
           </div>
           <h3 style={{ marginTop: "8px", marginBottom: "40px", textAlign: "center" }}><i>{film.original_title} ({film.original_title_romanised})</i></h3>

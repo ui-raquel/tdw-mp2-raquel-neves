@@ -35,3 +35,21 @@ export const PageContainer = styled.div`
   max-width: 1200px;
   margin: 0 auto;
 `;
+
+export const GlassButton = styled.button`
+  padding: 8px 16px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-weight: 500;
+  min-width: 100px;
+  cursor: pointer;
+  font-size: 14px;
+  color: rgb(118, 75, 162);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+  }
+`;
